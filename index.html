@@ -6,9 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Roman Converter</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <header>
+    <h1>ROMAN NUMERAL CONVERTER</h1>
+  </header>
+  <main>
+    <form id="converter">
+      <label for="num-input">Enter a Number:</label>
+      <input id="num-input" type="number" required/>
+      <button>Convert</button>
+    </form>
+    <div id="roman-display" class="hidden">X</div>
+  </main>
 </body>
 
 </html>
