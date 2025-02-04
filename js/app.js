@@ -5,38 +5,27 @@ const errorDisplay = document.getElementById("error-display");
 const form = document.querySelector("#converter");
 
 
-const romanArabArray = [
-  {"M": 1000},
-  {"CM": 900},
-  {"D": 500},
-  {"CD": 400},
-  {"C": 100},
-  {"XC": 90},
-  {"L": 50},
-  {"XL": 40},
-  {"X": 10},
-  {"IX": 9},
-  {"V": 5},
-  {"IV": 4},
-  {"I": 1}
-];
+const arabNums = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+const romanNums = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
 
 form.addEventListener("submit", (e) => {
   // This prevents the form from reloading the page
   e.preventDefault();
-  getRomanChar();
+  getRomanChar(numInput.value);
 });
 
 function getRomanChar() {
   let decimalValue = Number(numInput.value);
   let romanNum = "";
 
-  for(let i = 0; i < romanArabArray.length; i++) {
-
+  for(let i = 0; i < arabNums.length; i++) {
+    while(decimalValue >= arabNums[i]) {
+      romanNum += romanNums[i];
+      decimalValue -= arabNums[i];
+    }
   }
 
-
-
-
-
+  console.log(romanNum);
 }
+
+
