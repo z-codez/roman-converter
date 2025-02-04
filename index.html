@@ -18,10 +18,11 @@
   <main>
     <form id="converter">
       <label for="num-input">Enter a Number:</label>
-      <input id="num-input" type="number" required/>
+      <input id="num-input" type="number" min="0" max="3999" required/>
       <button>Convert</button>
     </form>
     <div id="roman-display" class="hidden">X</div>
+    <div id="error-display" class="hidden"></div>
   </main>
 </body>
 

@@ -11,22 +11,20 @@ body {
   color: white;
   background-color: #1B1B32;
   font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
 }
 
 header {
   margin: 100px auto 0;
   font-family: "Castoro Titling", serif;
-  text-align: center;
-  width: 500px;
 }
 
 form {
-  text-align: center;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 500px;
   height: 280px;
   border: 3px solid white;
   padding: 40px;
@@ -55,14 +53,25 @@ form button {
   background-image: linear-gradient(180deg, orange, darkorange);
 }
 
+.display {
+
+}
+
 #roman-display {
-  margin: 50px auto;
-  width: 500px;
-  text-align: center;
+  margin: 2rem auto;
   border: 3px solid white;
   background-color: #3B3B4F;
   font-size: 3rem;
   padding: 10px;
+}
+
+#error-display {
+  margin: 2rem auto;
+  font-size: 2.1rem;
+  padding: 1rem;
+  color: #850000;
+  background-color: #FFADAD;
+  border: 3px solid #850000;
 }
 
 .hidden {
